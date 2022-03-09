@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Faustina:wght@300&family=Lobster&family=Monoton');
+
+* { 
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: sans-serif;
+}
+
+
+/* HEADER NAVBAR */
+a,li {
+    font-family: 'Monoton', cursive;
+    text-decoration: none;
+    list-style: none;
+    color: ivory;
+}
+.nav-menu a:hover {
+    background: darkgray;
+    color: orange;
+}
+.logo {
+    width: 50px;
+}
+.header {
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem ;
+}
+.nav-menu ul {
+    display: flex;
+    align-items: center;
+}
+.nav-menu li {
+    margin-right: 1.5rem;
+}
+.nav-menu li:last-child {
+    background-color: orange ;
+    border: 2px solid orange;
+    padding: .25rem .75rem;
+    border-radius: .2rem;
+}
+.nav-menu li:last-child:hover {
+    background: transparent;
+    border: 2px solid orange;
+}
+.logo:hover {
+    background: darkgray;
+    transition: 2s;
+    transform: rotate(360deg)
+    
+}
+
+
+/* IMG BURGER LOGO NAV*/
+
+.menu-icon img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+.menu-icon, #check {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .checkbtn {
+        display: block;
+    }
+    .menu-icon {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    .nav-menu ul {
+        display: block;
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        background-color: #261b17;
+        width: 100%;
+        height: 20vh;
+        right: 0;
+    }
+    nav.menu ul li {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .nav-menu ul li:last-child{
+        background: none;
+        padding: 1rem;
+    }
+    #check:checked ~ ul{
+        left: 0;
+        transition: all .25s;
+    }
+    
+}
+
+/* INDEX */
+
+
+
+
+/* SECCION ACERCA DE MI*/ 
+
+
+
+.line {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.fondo-acerca {
+    width: 1fr 1fr;
+    padding: 1px;
+    background-color: burlywood;
+}
+.div {
+    width: 1fr;
+    margin: 200px;
+}
+.biografia {
+    width: 1fr;
+    margin: 100px 75px;
+    text-align: left;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    letter-spacing: 1px;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from { 
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.title {
+text-align: center;
+font-family: 'Monoton', cursive;
+font-size: 50px;
+padding-top: 50px;
+}
+.title:hover {
+    animation-duration: 5s;
+    animation-name: aparecer;
+}
+@keyframes aparecer {
+    0% {
+       opacity: 0; 
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.foto-perfil {
+    float: left;
+ width: 25rem;
+ height: 25rem;
+ padding: 50px 75px;
+ border-radius: 225px;
+}
+.foto-perfil:hover {
+    transform: rotate(360deg);
+    transition-duration: 5s;
+}
+
+
+@media screen and (max-width: 768px) {
+    .fondo-acerca {
+        width: .5fr .5fr;
+    }
+    .div {
+        width: .5fr;
+        margin: 100px;
+    }
+    .biografia {
+        width: .5fr;
+        margin: 10px 10px;
+        text-align: left;
+        font-family: 'Lobster', cursive;
+        font-size: 10px;
+        letter-spacing: .3px;
+        animation-duration: 3s;
+        animation-name: slidein;
+    }
+    .foto-perfil {
+        float: left;
+     width: 10rem;
+     height: 10rem;
+     padding: 30px 45px;
+     border-radius: 175px;
+    }
+    .title {
+        text-align: center;
+        font-family: 'Monoton', cursive;
+        font-size: 100%;
+        padding-top: 50px;
+        }
+}
+
+
+
+
+
+/* SECCION CONOCIMIENTOS */
+
+.flex-container {
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: burlywood;
+    padding: 10px;
+    border: 2px solid black;
+    height: 700px;
+    
+}
+.flex-container div {
+  
+    background-color: gainsboro;
+    width: 100px;
+    margin: 15px;
+    border: 2px solid black;
+}
+.lenguajes {
+    float: left;
+   width: 100px;
+   height: 100px;
+   border-radius: 2cm;
+}
+
+
+.lenguajes:hover {
+    transform: rotate(180deg);
+    transition: 1.5s;
+}
+.text-conocimiento {
+    font-family: 'Lobster', cursive;
+    letter-spacing: 1px;
+    color: #a97452;
+    font-size: 15px;
+}
+
+/* MEDIA QUERY CONOCIMIENTOS A PARTIR DE 438 */ 
+@media screen and (max-width: 438px) {
+    
+    .flex-container {
+ 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: burlywood;
+        padding: 100px 0px;
+        border: 2px solid black;
+        height: 500px;
+        
+    }
+    .flex-container div {
+      
+        background-color: gainsboro;
+        width: 90px;
+        margin: 10px;
+        border: 2px solid black;
+    }
+    .lenguajes {
+        float: left;
+       width: 90px;
+       height: 90px;
+       border-radius: 2cm;
+    }
+    
+    
+    .lenguajes:hover {
+        transform: rotate(180deg);
+        transition: 1.5s;
+    }
+    .text-conocimiento {
+        font-family: 'Lobster', cursive;
+        letter-spacing: .5px;
+        color: #a97452;
+        font-size: 12px;
+    }
+}
+
+/* SECCION TRABAJOS*/
+.fondo-trabajo {
+    background-color: burlywood;
+}
+.proyectos {
+    font-size: 45px;
+    color: #786a5d;
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+.columna {
+    float: left;
+    padding: 50px 15rem;
+  }
+  
+  .fila:after {
+    content: "";
+    clear: both;
+    display: table;
+    padding: 50px;
+  }
+
+@media screen and (max-width:768px) {
+    .proyectos {
+        font-size: 25px;
+        color: #786a5d;
+        font-family: 'Monoton', cursive;
+        text-align: center;
+        margin-bottom: 50px;
+    
+    }
+    .columna {
+        float: center;
+        padding: 5px 5rem;
+        width: 50%;
+        height: 50%;
+      }
+      .fila:after {
+        content: "";
+        clear: both;
+        display: table;
+        padding: 25px;
+      }
+      img {
+          width: 150px;
+      }
+}
+
+/* SECCION CONTACTO */
+.background-contacto {
+    background-color: burlywood;
+}
+.saludo-contacto {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    letter-spacing: 3px;
+    color: rgb(255, 214, 163);
+    margin-bottom: 75px;
+    
+}
+
+form {
+    background-color: #a97452;
+    width: 450px;
+    border:  10px solid #261b17;
+    padding: 10px 15px;
+}
+.formu {
+    font-family: 'Monoton', cursive;
+    letter-spacing: 1px;
+    margin: 5px;
+    
+}
+
+.box {
+    background-color: #eaddcc;
+    padding: 15px 0px;
+    border: 20px solid #786a5d ;
+    margin-bottom: 5%;
+    border-radius: 5px ;
+    width: 400px;height: 250px;
+}
+.casillero {
+    border-radius: 5px;
+}
+.boton {
+    display: inline-block;
+    padding: 2%;
+    border-radius: 10px;
+    transform: translatex(5px) translatey(5px);
+}
+.boton:hover {
+    background-color: lightslategray;
+    transition: 0.8s;
+    transform: scale(99%); 
+}
+
+@media screen and (max-width: 768px) {
+    .saludo-contacto {
+        font-family: 'Lobster', cursive;
+        font-size: 12px;
+        letter-spacing: 3px;
+        color: rgb(97, 68, 32);
+        margin-bottom: 75px;
+        
+    }
+    
+
+    form {
+        background-color: #a97452;
+        width: 50%;
+        border:  10px solid #261b17;
+        padding: 1fr;
+        height: 50%;
+    }
+    .formu {
+        font-family: 'Monoton', cursive;
+        letter-spacing: 1px;
+        margin: 1px;
+        width: 10px;
+        height: 1fr;
+        
+    }
+    
+    .box {
+        background-color: #eaddcc;
+        border: 20px solid #786a5d ;
+        width: 135px;
+        height: 250px;
+        
+    }
+    .boton {
+        display: inline-block;
+        padding: 2%;
+        border-radius: 10px;
+        transform: translatex(5px) translatey(5px);
+    }
+    .casillero {
+        border-radius: 5px;
+        margin: 1rem;
+    }
+}
